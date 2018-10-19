@@ -1,0 +1,89 @@
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['R_SAA','L_SAA','R_SFE','L_SFE','R_EB','L_EB','R_HAA','L_HAA','R_HR','L_HR','R_HFE','L_HFE','R_KFE','L_KFE','R_AFE','L_AFE','R_AR','L_AR' ]
+  servo_number: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 ]
+  joint_encoder_offset: [522, 500, 513, 502, 502, 504, 351, 657, 512, 513, 520, 496, 516, 502, 510, 503, 509, 511]
+  angle_max: [2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.5,2.5,2.5,2.5,2.0,2.0,2.0,2.0 ]
+  angle_min: [-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.0,-2.8,-2.8,-2.0,-2.0,-2.0,-2.0 ]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>
+
+L Foot
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['l_hip_twist_joint', 'l_hip_lateral_joint', 'l_hip_swing_joint', 'l_knee_joint', 'l_ankle_swing_joint', 'l_ankle_lateral_joint']
+  servo_number: [8, 10, 12, 14, 16, 18]
+  joint_encoder_offset: [657, 512, 512, 512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>
+
+R Foot
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['r_hip_twist_joint', 'r_hip_lateral_joint', 'r_hip_swing_joint', 'r_knee_joint', 'r_ankle_swing_joint', 'r_ankle_lateral_joint']
+  servo_number: [7, 9, 11, 13, 15, 17]
+  joint_encoder_offset: [351, 512, 512, 512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>
+
+L Arm
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['l_shoulder_swing_joint', 'l_shoulder_lateral_joint', 'l_elbow_joint']
+  servo_number: [2, 4, 6]
+  joint_encoder_offset: [512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>
+
+R Arm
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['r_shoulder_swing_joint', 'r_shoulder_lateral_joint', 'r_elbow_joint']
+  servo_number: [1, 3, 5]
+  joint_encoder_offset: [512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>
+
+both arm
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['r_shoulder_swing_joint', 'r_shoulder_lateral_joint', 'r_elbow_joint', 'l_shoulder_swing_joint', 'l_shoulder_lateral_joint', 'l_elbow_joint']
+  servo_number: [1, 3, 5, 2, 4, 6]
+  joint_encoder_offset: [512, 512, 512, 512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>
+
+both leg
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['l_hip_twist_joint', 'l_hip_lateral_joint', 'l_hip_swing_joint', 'l_knee_joint', 'l_ankle_swing_joint', 'l_ankle_lateral_joint', 'r_hip_twist_joint', 'r_hip_lateral_joint', 'r_hip_swing_joint', 'r_knee_joint', 'r_ankle_swing_joint', 'r_ankle_lateral_joint']
+  servo_number: [8, 10, 12, 14, 16, 18, 7, 9, 11, 13, 15, 17]
+  joint_encoder_offset: [657, 512, 512, 512, 512, 512, 351, 512, 512, 512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>

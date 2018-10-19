@@ -1,0 +1,11 @@
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['l_hip_twist_joint', 'l_hip_lateral_joint', 'l_hip_swing_joint', 'l_knee_joint', 'l_ankle_swing_joint', 'l_ankle_lateral_joint', 'r_hip_twist_joint', 'r_hip_lateral_joint', 'r_hip_swing_joint', 'r_knee_joint', 'r_ankle_swing_joint', 'r_ankle_lateral_joint']
+  servo_number: [8, 10, 12, 14, 16, 18, 7, 9, 11, 13, 15, 17]
+  joint_encoder_offset: [657, 512, 512, 512, 512, 512, 351, 512, 512, 512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>

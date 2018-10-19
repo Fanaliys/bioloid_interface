@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="bioloid_interface" type="joint_subscriber" name="joint_subscriber"/>
+</launch>

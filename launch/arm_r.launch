@@ -1,0 +1,11 @@
+<launch>
+ <rosparam ns="/bioloid/joints">
+  name: ['r_shoulder_swing_joint', 'r_shoulder_lateral_joint', 'r_elbow_joint']
+  servo_number: [1, 3, 5]
+  joint_encoder_offset: [512, 512, 512]
+  angle_max: [2.0, 2.0, 2.0]
+  angle_min: [-2.0, -2.0, -2.0]
+  sim: false
+  torque: true
+ </rosparam>
+</launch>

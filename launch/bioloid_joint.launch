@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="bioloid_interface" type="bioloid_joint" name="bioloid_joint"/>
+</launch>

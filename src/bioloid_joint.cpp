@@ -1,0 +1,40 @@
+#include "ros/ros.h"
+#include "ros/assert.h"
+#include "sensor_msgs/JointState.h"
+
+class SubscribeAndPublish
+{
+	private:
+		ros::NodeHandle nH;
+		ros::Publisher p_object1;
+		ros::Subscriber s_object1;
+
+	public:
+ 		SubscribeAndPublish()
+ 		{
+   		p_object1 = nH.advertise<sensor_msgs::JointState>("/bioloid_interface/command", 1000);
+
+/*** Select the one you're using, and break the other one. Then do a catkin_make ***/
+/*** For connecting to RVIZ ***/
+   		s_object1 = nH.subscribe("/joint_states", 1000, &SubscribeAndPublish::callback, this);
+
+/*** For connecting to Gazebo ***/
+//                s_object1 = nH.subscribe("/typea/joint_states", 1000, &SubscribeAndPublish::callback, this);
+ 		}
+
+/*** Transfering data from /joint_states to /bioloid_interface/command ***/
+ 	void callback(const sensor_msgs::JointState::ConstPtr& msg)
+	{
+		p_object1.publish(msg);
+	}
+};
+
+int main(int argc,char** argv)
+{
+	ros::init(argc, argv, "bioloid_joint");
+	SubscribeAndPublish bioloid_joint_msg;
+
+	ros::spin();
+	return 0;
+}
+

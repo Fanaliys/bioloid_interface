@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="bioloid_interface" type="arm_move" name="arm_move"/>
+
+</launch>

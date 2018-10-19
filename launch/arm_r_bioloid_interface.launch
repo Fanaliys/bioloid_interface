@@ -1,0 +1,9 @@
+<launch>
+    <!-- Parameters for robot, servo number mapping, home offsets etc -->
+    <include file="$(find bioloid_interface)/launch/arm_r.launch"/>
+
+    <!-- Communicates with the actual robot-->
+    <node name="bioloid_interface" pkg="bioloid_interface" type="bioloid_interface" required="true" output="screen"/>
+
+
+</launch>
